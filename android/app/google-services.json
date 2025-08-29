@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798154876909",
+    "project_id": "fp-1-1474c",
+    "storage_bucket": "fp-1-1474c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798154876909:android:a5e8718f514446d48769e4",
+        "android_client_info": {
+          "package_name": "akira.digital.firebaseapp.firebaseapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxGVMELIw0U61J30upvso1-xpuCOpgG2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
