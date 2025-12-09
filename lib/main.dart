@@ -4,7 +4,10 @@ import 'package:firebaseapp/FireStoreDemo.dart';
 import 'package:firebaseapp/Homescreen.dart';
 import 'package:firebaseapp/LoginPage.dart';
 import 'package:firebaseapp/OTPPAGE.dart';
+import 'package:firebaseapp/PLANS/MyPlan.dart';
 import 'package:firebaseapp/RefreshIndicatorDemo.dart';
+import 'package:firebaseapp/SplashScreen.dart';
+import 'package:firebaseapp/TRAINER/TrainerScreen.dart';
 import 'package:flutter/material.dart';
 import 'FireStoreGpt.dart';
 import 'Home.dart';
@@ -65,12 +68,15 @@ class _MyAppState extends State<MyApp> {
       ),
       // home: user!=null?Home():Registration(),
       //home: Registration(),
-     //  home: Otppage(),
-      //home: Homescreen(),
+      // home: Splashscreen(),
+     // home: Homescreen(),
       //home: LoginPage(),
       //home: FirestoreGpt(),
       //home: Login(),
-      home: Refreshindicatordemo(),
+      //home: Refreshindicatordemo(),
+      //home: Myplan(),
+      //home: Homescreen(),
+      home: TrainerScreen(),
 
       debugShowCheckedModeBanner: false,
 

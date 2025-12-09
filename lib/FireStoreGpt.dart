@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebaseapp/Homescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -46,7 +47,7 @@ class _FirestoreGptState extends State<FirestoreGpt> {
         // Add data to Firestore collection "Users"
         final i=FirebaseFirestore.instance;
         i.collection("users").doc(data?.uid).set(user);
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Home(),));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Homescreen(),));
 
         // Show success message
         ScaffoldMessenger.of(context).showSnackBar(

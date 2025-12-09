@@ -41,6 +41,8 @@ dependencies:
   country_code_picker: any
   cloud_firestore: any
   firebase_messaging: any
+  url_launcher: any
+
   
   lottie: ^3.3.1  # Latest Lottie package for animated effects :contentReference[oaicite:1]{index=1}
 

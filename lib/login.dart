@@ -1,6 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebaseapp/Registration.dart';
+import 'package:firebaseapp/Trainer.dart';
+import 'package:firebaseapp/TrainerFormPage.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Home.dart';
 import 'Homescreen.dart';
@@ -13,6 +16,10 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  Future<void> sharedpref() async {
+    final mpref=await SharedPreferences.getInstance();
+    mpref.setString("session", "in");
+  }
   void _login() async {
     try {
       UserCredential user= await FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -27,10 +34,21 @@ class _LoginState extends State<Login> {
           context,
         ).showSnackBar(SnackBar(content: Text("Login Successful")));
 
-        Navigator.pushReplacement(
+        if(name.text=="trainer@gmail.com"&&password.text=="45454545")
+          {
+            sharedpref();
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => Trainer()),
+
+            );
+          }
+        else{
+          sharedpref();
+          Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => Homescreen()),
-        );
+        );}
       }
       else{
         ScaffoldMessenger.of(
